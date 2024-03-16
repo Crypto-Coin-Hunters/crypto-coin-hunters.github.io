@@ -17,10 +17,16 @@
     <link rel="stylesheet" href="assets/css/style.css">
 
     <title>Crypto Coin Hunters</title>
+    
+    <script src="https://unpkg.com/htmlincludejs"></script>
+    
 </head>
 
 <body>
     <header class="mt-0 pt-0">
+       
+<!-- Transferred to header.html
+              
         <div class="bg-cover clearfix pt-3">
             <h2 class="logo">Crypto Coin Hunters</h2>
             <nav class="nav nav-fill mx-auto">
@@ -46,7 +52,7 @@
                 </li>
                 
                 -->
-                
+<!--                
             </nav>
 
 
@@ -95,6 +101,21 @@
                 </nav>
             </div>
         </div>
+-->
+        <include src="header.html"></include>
+           <script>
+              let includes = document.getElementsByTagName('include');
+              for (var i = 0; i < includes.length; i++) {
+                 let include = includes[i];
+                 load_file(includes[i].attributes.src.value, function(text) {
+                    include.insertAdjacentHTML('afterend', text);
+                    include.remove();
+                 });
+              }
+              function load_file(filename, callback) {
+                 fetch(filename).then(response => response.text()).then(text => callback(text));
+              }
+           </script>
 
         <div class="row ml-0 mr-0">
             <div class="col-md-6 pr-0">
