@@ -17,6 +17,9 @@
 </head>
 
 <body class="article-pg">
+
+<!-- Transferred to Article Header File
+         
     <header class="mt-0 pt-0">
         <div class="bg-cover clearfix pt-3">
             <h2 class="logo">Crypto Coin Hunters</h2>
@@ -41,12 +44,9 @@
                 <li class="nav-item">
                     <a class="nav-link" href="#"><i class="fas fa-rss"></i></a>
                 </li>
-                
-                -->
-                
+                            
             </nav>
 
-<!--
             <input type="text" id="nav-search" class="nav-search mx-auto" name="" class="form-control">
             <div class="ml-0 mr-0 pb-1">
                 <nav class="navbar navbar-expand-md">
@@ -91,7 +91,7 @@
                     </div>
                 </nav>
             </div>
--->            
+          
             
             <ul class="nav nav-fill mx-auto breadc pb-3">
                 <li class="nav-item">
@@ -107,7 +107,22 @@
 
 
     </header>
-
+-->
+    
+    <include src="header.html"></include>
+           <script>
+              let includes = document.getElementsByTagName('include');
+              for (var i = 0; i < includes.length; i++) {
+                 let include = includes[i];
+                 load_file(includes[i].attributes.src.value, function(text) {
+                    include.insertAdjacentHTML('afterend', text);
+                    include.remove();
+                 });
+              }
+              function load_file(filename, callback) {
+                 fetch(filename).then(response => response.text()).then(text => callback(text));
+              }
+           </script>
 
     <div class="container-fluid ar-content">
         <div class="container">
