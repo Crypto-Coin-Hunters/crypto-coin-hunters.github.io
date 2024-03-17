@@ -184,11 +184,11 @@
     <div class="container-fluid video-player">
         <div class="container">
             <div class="screen embed-responsive embed-responsive-16by9">
-                <iframe id="screen" src="https://www.youtube.com/embed/YE7VzlLtp-4" frameborder="0"
+                <iframe id="screen" src="https://www.youtube.com/watch?v=Sm46UeDkLvg" frameborder="0"
                     allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
                     allowfullscreen></iframe>
             </div>
-
+<!-- Removing Video Playlist Playlist for now
             <div class="play-list">
                 <div class="owl-carousel owl-carousel4 owl-theme">
                     <div>
@@ -227,10 +227,11 @@
                     </div>
                 </div>
             </div>
+-->            
             <hr>
 
 
-
+<!-- Contents trimmed down for now
             <div class="row vr-gallery">
                 <div class="col-md-8 mb-4">
                     <div class="row">
@@ -474,7 +475,23 @@
             </div>
         </div>
     </div>
+-->
+    <include src="footer.html"></include>
+           <script>
+              let includes = document.getElementsByTagName('include');
+              for (var i = 0; i < includes.length; i++) {
+                 let include = includes[i];
+                 load_file(includes[i].attributes.src.value, function(text) {
+                    include.insertAdjacentHTML('afterend', text);
+                    include.remove();
+                 });
+              }
+              function load_file(filename, callback) {
+                 fetch(filename).then(response => response.text()).then(text => callback(text));
+              }
+           </script>
 
+<!-- Transferred footer to separate file   
     <div class="container-fluid jumbotron-fluid stay mt-5 pt-5 pb-5">
         <h2 class="text-center">Stay Updated</h2>
         <p class="text-center mt-2">Sign up for our newsletter to receive the latest news and event postings.</p>
@@ -488,7 +505,7 @@
 
     <footer class="container-fluid pt-5">
         <div class="container">
-            <h2 class="logo text-center">Shahala</h2>
+            <h2 class="logo text-center">Crypto Coin Hunters</h2>
             <nav class="nav nav-fill mx-auto mt-5">
                 <li class="nav-item">
                     <a class="nav-link" href="https://facebook.com/fh5co" target="_blank"><i
@@ -515,13 +532,17 @@
         </div>
     </footer>
 
+  
+   
     <script src="assets/js/popper.min.js"></script>
     <script src="assets/js/jquery-1.12.0.min.js"></script>
     <script src="assets/js/bootstrap.min.js"></script>
     <script src="assets/js/owl.carousel.min.js"></script>
     <script src="assets/js/jquery.yu2fvl.js"></script>
     <script src="assets/js/main.js"></script>
-
+-->
+        </div>
+    </div> 
 </body>
 
 </html>
