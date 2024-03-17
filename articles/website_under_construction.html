@@ -205,15 +205,16 @@
                                     async>
                             </script>
 -->
-                           <br>
                         </div>
                     </div>
+                    
+                    <div>
 <!-- begin wwww.htmlcommentbox.com -->
-                             <div id="HCB_comment_box"><a href="http://www.htmlcommentbox.com">HTML Comment Box</a> is loading comments...</div>
-                             <link rel="stylesheet" type="text/css" href="https://www.htmlcommentbox.com/static/skins/bootstrap/twitter-bootstrap.css?v=0" />
-                             <script type="text/javascript" id="hcb"> /*<!--*/ if(!window.hcb_user){hcb_user={};} (function(){var s=document.createElement("script"), l=hcb_user.PAGE || (""+window.location).replace(/'/g,"%27"), h="https://www.htmlcommentbox.com";s.setAttribute("type","text/javascript");s.setAttribute("src", h+"/jread?page="+encodeURIComponent(l).replace("+","%2B")+"&mod=%241%24wq1rdBcg%24SxhDMYsg0J8rNqHaECySJ1"+"&opts=16798&num=10&ts=1710603268489");if (typeof s!="undefined") document.getElementsByTagName("head")[0].appendChild(s);})(); /*-->*/ </script>
+         <div id="HCB_comment_box"><a href="http://www.htmlcommentbox.com">Comment Form</a> is loading comments...</div>
+         <link rel="stylesheet" type="text/css" href="https://www.htmlcommentbox.com/static/skins/bootstrap/twitter-bootstrap.css?v=0" />
+         <script type="text/javascript" id="hcb"> /*<!--*/ if(!window.hcb_user){hcb_user={};} (function(){var s=document.createElement("script"), l=hcb_user.PAGE || (""+window.location).replace(/'/g,"%27"), h="https://www.htmlcommentbox.com";s.setAttribute("type","text/javascript");s.setAttribute("src", h+"/jread?page="+encodeURIComponent(l).replace("+","%2B")+"&mod=%241%24wq1rdBcg%24SxhDMYsg0J8rNqHaECySJ1"+"&opts=16671&num=5&ts=1710680230087");if (typeof s!="undefined") document.getElementsByTagName("head")[0].appendChild(s);})(); /*-->*/ </script>
 <!-- end www.htmlcommentbox.com -->
-
+                    </div>
 <!--
                     <div class="comment-form my-5 pt-5">
                         <h3>Add Comments</h3>
@@ -254,162 +255,73 @@
 
                         </div>
 
+<!-- Twitter Post Transferred to tweet.html -->                        
 
-                        <div class="owl-carousel bg-gray owl-carousel5 owl-theme my-5 pb-5">
-                            <div>
-                                <div class="card bg-gray">
-                                    <h3 class="text-center mt-3 mb-0">Twitter Posts</h3>
-                                    <hr class="mx-auto" />
-                                    <p class="text-center mt-1">No Twitter posts at this moment.</p>
-                                    <p class="text-center my-1"><span>March 16, 2024</span></p>
-                                </div>
-
-                            </div>
-                            <div>
-                                <div class="card bg-gray">
-                                    <h3 class="text-center mt-3 mb-0">Twitter Posts</h3>
-                                    <hr class="mx-auto" />
-                                    <p class="text-center mt-1">Again, no Twitter posts at this moment.</p>
-                                    <p class="text-center my-1"><span>March 16, 2024</span></p>
-                                </div>
-
-                            </div>
-                            <div>
-                                <div class="card bg-gray">
-                                    <h3 class="text-center mt-3 mb-0">Twitter Posts</h3>
-                                    <hr class="mx-auto" />
-                                    <p class="text-center mt-1">Really?</p>
-                                    <p class="text-center my-1"><span>March 16, 2024</span></p>
-                                </div>
-
-                            </div>
-                            <div>
-                                <div class="card bg-gray">
-                                    <h3 class="text-center mt-3 mb-0">Twitter Posts</h3>
-                                    <hr class="mx-auto" />
-                                    <p class="text-center mt-1">I give up...</p>
-                                    <p class="text-center my-1"><span>March 16, 2024</span></p>
-                                </div>
-
-                            </div>
-
-
-                        </div>
-
-                        <h3 class="text-center">Follow Us</h3>
-                        <hr class="mx-auto" />
-                        <nav class="nav nav-fill mx-auto mb-5">
-                            <li class="nav-item">
-                                <a class="nav-link" href="https://www.facebook.com/cryptocoinhunters" target="_blank"><i
-                                        class="fab fa-facebook-f"></i></a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="https://twitter.com/crpto_coin_hunt" target="_blank"><i
-                                        class="fab fa-twitter"></i></a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="https://www.instagram.com/cryptocoinhunters"><i class="fab fa-instagram"></i></a>
-                            </li>
+                        <include src="../tweet.html"></include>
+                        <script>
+                            let includes = document.getElementsByTagName('include');
+                            for (var i = 0; i < includes.length; i++) {
+                                let include = includes[i];
+                                load_file(includes[i].attributes.src.value, function(text) {
+                                    include.insertAdjacentHTML('afterend', text);
+                                    include.remove();
+                                });
+                            }
+                            function load_file(filename, callback) {
+                                fetch(filename).then(response => response.text()).then(text => callback(text));
+                            }
+                        </script>
                         
-<!--                        <li class="nav-item">
-                                <a class="nav-link" href="#"><i class="fab fa-google-plus-g"></i></a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#"><i class="fas fa-rss"></i></a>
-                            </li>
--->
-                        </nav>
+<!-- Follow Us Transferred to follow.html -->                         
 
-                        <h3 class="text-center">Instagram</h3>
-                        <hr class="mx-auto" />
-                        <div class="row insta-links mt-2">
-                            <div class="col-md-4 col-sm-6 col-6">
-                                <div class="card">
-                                    <img class="card-img w-100" src="../assets/images/sitelogo.jpg" alt="">
-                                    <div class="card-img-overlay d-flex justify-content-center align-items-center">
-                                        <a href="https://www.instagram.com/p/C4lEfD2ymjd/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="><img src="../assets/images/right-icon.png" alt=""></a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-4 col-sm-6 col-6">
-                                <div class="card">
-                                    <img class="card-img w-100" src="../assets/images/sitebanner.jpg" alt="">
-                                    <div class="card-img-overlay d-flex justify-content-center align-items-center">
-                                        <a href="https://www.instagram.com/p/C4lHKn1yH7H/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="><img src="../assets/images/right-icon.png" alt=""></a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-4 col-sm-6 col-6">
-                                <div class="card">
-                                    <img class="card-img w-100" src="../assets/images/under_construction.jpg" alt="">
-                                    <div class="card-img-overlay d-flex justify-content-center align-items-center">
-                                        <a href="https://www.instagram.com/p/C4lHWLOy6O1/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="><img src="../assets/images/right-icon.png" alt=""></a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-4 col-sm-6 col-6">
-                                <div class="card">
-                                    <img class="card-img w-100" src="../assets/images/author_propic.jpg" alt="">
-                                    <div class="card-img-overlay d-flex justify-content-center align-items-center">
-                                        <a href="https://www.instagram.com/p/C4lHceMy2oH/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="><img src="../assets/images/right-icon.png" alt=""></a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-4 col-sm-6 col-6">
-                                <div class="card">
-                                    <img class="card-img w-100" src="../assets/images/gpu_bg.jpg" alt="">
-                                    <div class="card-img-overlay d-flex justify-content-center align-items-center">
-                                        <a href="https://www.instagram.com/p/C4lHlHkSLPC/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="><img src="../assets/images/right-icon.png" alt=""></a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-4 col-sm-6 col-6">
-                                <div class="card">
-                                    <img class="card-img w-100" src="../assets/images/under_construction_bldg.jpg" alt="">
-                                    <div class="card-img-overlay d-flex justify-content-center align-items-center">
-                                        <a href="https://www.instagram.com/p/C4lHvN9yl9Y/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="><img src="../assets/images/right-icon.png" alt=""></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                        <include src="../follow.html"></include>
+                        <script>
+                            let includes = document.getElementsByTagName('include');
+                            for (var i = 0; i < includes.length; i++) {
+                                let include = includes[i];
+                                load_file(includes[i].attributes.src.value, function(text) {
+                                    include.insertAdjacentHTML('afterend', text);
+                                    include.remove();
+                                });
+                            }
+                            function load_file(filename, callback) {
+                                fetch(filename).then(response => response.text()).then(text => callback(text));
+                            }
+                        </script>
+                        
+<!-- Instagram Post Transferred to insta.html --> 
+                       
+                        <include src="../insta.html"></include>
+                        <script>
+                            let includes = document.getElementsByTagName('include');
+                            for (var i = 0; i < includes.length; i++) {
+                                let include = includes[i];
+                                load_file(includes[i].attributes.src.value, function(text) {
+                                    include.insertAdjacentHTML('afterend', text);
+                                    include.remove();
+                                });
+                            }
+                            function load_file(filename, callback) {
+                                fetch(filename).then(response => response.text()).then(text => callback(text));
+                            }
+                        </script>
+                        
+<!-- Trending Post Transferred to trending.html -->                        
 
-                        <h3 class="text-center mt-5">Trending Posts</h3>
-                        <hr class="mx-auto" />
-                        <div class="tranding-posts mt-4">
-<!--
-                            <div class="media my-3">
-                                <div class="d-flex align-items-center justify-content-center"><a href="#"><img
-                                            src="../assets/images/t-post1.png" alt=""></a></div>
-                                <div
-                                    class="media-body text-center d-flex align-items-center justify-content-center flex-column px-3">
-                                    <a href="#">The latest trends
-                                        in Travel</a>
-                                    <p class="mt-1">08 Jan 2019</p>
-                                </div>
-                            </div>
-                            <div class="media my-3">
-                                <div class="d-flex align-items-center justify-content-center"><a href="#"><img
-                                            src="../assets/images/t-post2.png" alt=""></a></div>
-                                <div
-                                    class="media-body text-center d-flex align-items-center justify-content-center flex-column px-3">
-                                    <a href="#">Effective fine art
-                                        design</a>
-                                    <p class="mt-1">08 Jan 2019</p>
-                                </div>
-                            </div>
-                            <div class="media my-3">
-                                <div class="d-flex align-items-center justify-content-center"><a href="#"><img
-                                            src="../assets/images/t-post3.png" alt=""></a></div>
-                                <div
-                                    class="media-body text-center d-flex align-items-center justify-content-center flex-column px-3">
-                                    <a href="#">How to design
-                                        your first PSD?</a>
-                                    <p class="mt-1">08 Jan 2019</p>
-                                </div>
-                            </div>
-                        </div>
--->                        
-                    </div>
+                        <include src="../trending.html"></include>
+                        <script>
+                            let includes = document.getElementsByTagName('include');
+                            for (var i = 0; i < includes.length; i++) {
+                                let include = includes[i];
+                                load_file(includes[i].attributes.src.value, function(text) {
+                                    include.insertAdjacentHTML('afterend', text);
+                                    include.remove();
+                                });
+                            }
+                            function load_file(filename, callback) {
+                                fetch(filename).then(response => response.text()).then(text => callback(text));
+                            }
+                        </script>
                 </div>
             </div>
         </div>
@@ -427,40 +339,10 @@
         </div>
     </div>
     
-<!-- Footer Transferred to separate file
-
-    <footer class="container-fluid pt-5">
-        <div class="container">
-            <h2 class="logo text-center">Crypto Coin Hunters</h2>
-            <nav class="nav nav-fill mx-auto mt-5">
-                <li class="nav-item">
-                    <a class="nav-link" href="https://www.facebook.com/cryptocoinhunters" target="_blank"><i
-                            class="fab fa-facebook-f"></i></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="https://twitter.com/crpto_coin_hunt" target="_blank"><i
-                            class="fab fa-twitter"></i></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="https://www.instagram.com/cryptocoinhunters"><i class="fab fa-instagram"></i></a>
-                </li>
-              
-                <li class="nav-item">
-                    <a class="nav-link" href="#"><i class="fab fa-google-plus-g"></i></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#"><i class="fas fa-rss"></i></a>
-                </li>
-            
-            </nav>
-        </div>
-        <div class="copy-right mt-4">
-            <p class="text-center">&copy; 2024 <a href="#" class="text-white">Crypto Coin Hunters</a>. All Rights Reserved. Design
-                by <a href="https://freehtml5.co/shahala" target="_blank" class="text-white">FreeHTML5.co</a>.</p>
-        </div>
-    </footer>
--->
     </div>
+    
+<!-- Footer Transferred to art_footer.html -->     
+    
     <include src="../art_footer.html"></include>
            <script>
               let includes = document.getElementsByTagName('include');
@@ -482,7 +364,7 @@
     <script src="../assets/js/owl.carousel.min.js"></script>
     <script src="../assets/js/article.js"></script>
 
-
+    
 </body>
 
 </html>
